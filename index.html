@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สลิปกสิกรไทย</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body onload="updateDisplay()">
+    <div class="container">
+        <div class="display-container">
+            <div class="display" id="display">
+                <canvas id="canvas" width="617" height="1280"></canvas>
+                <button onclick="downloadImage()">คัดลอกเป็นรูปภาพ</button>
+            </div>
+        </div>
+        <div class="form-container">
+            <h1>สลิปกสิกรไทย</h1>
+            <div class="form">
+                <label for="sendername">ผู้โอน</label>
+                <input type="text" id="sendername" name="sendername" value="นางสาว วรางคณา บุญศรี" oninput="updateDisplay()">
+
+                <input type="text" id="senderaccount" name="senderaccount" value="0203xxxx6881" oninput="updateDisplay()">
+
+                <label for="receivername">ผู้รับโอน</label>
+                <input type="text" id="receivername" name="receivername" value="นาย ประสิทธิ์ ครองสุข" oninput="updateDisplay()">
+
+                <input type="text" id="receiveraccount" name="receiveraccount" value="00xxxx0914" oninput="updateDisplay()">
+
+                <select id="bank" name="bank" onchange="updateDisplay()">
+                    <option value="ธนาคารกสิกรไทย">ธ.กสิกรไทย</option>
+                    <option value="ธนาคารกรุงไทย">ธ.กรุงไทย</option>
+                    <option value="ธนาคารกรุงเทพ">ธ.กรุงเทพ</option>
+                    <option value="ธนาคารไทยพาณิชย์">ธ.ไทยพาณิชย์</option>
+                    <option value="ธนาคารกรุงศรีอยุธยา">ธ.กรุงศรีอยุธยา</option>
+                    <option value="ธนาคารทหารไทยธนชาต">ธ.ทหารไทยธนชาต</option>
+                    <option value="ธนาคารออมสิน">ธ.ออมสิน</option>
+                    <option value="ธ.ก.ส.">ธ.ก.ส.</option>
+                    <option value="ธนาคารอาคารสงเคราะห์">ธ.อาคารสงเคราะห์</option>
+                    <option value="ธนาคารเกียรตินาคินภัทร">ธ.เกียรตินาคินภัทร</option>
+                    <option value="ธนาคารซีไอเอ็มบีไทย">ธ.ซีไอเอ็มบีไทย</option>
+                    <option value="ธนาคารยูโอบี">ธ.ยูโอบี</option>
+                    <option value="ธนาคารแลนด์ แอนด์ เฮาส์">ธ.แลนด์ แอนด์ เฮาส์</option>
+                    <option value="ธนาคารไอซีบีซี">ธ.ไอซีบีซี</option>
+                </select>
+                
+
+                <label for="amount11">จำนวนเงิน</label>
+                <input type="text" id="amount11" name="amount11" value="3,200.00" oninput="updateDisplay()">
+
+                <label for="datetime">เวลา (hh:mm:ss):</label>
+                <input type="datetime-local" id="datetime" step="1" required oninput="updateDisplay()">
+
+
+                <!-- Add this select element to your form-container in the HTML -->
+                 <label for="imageSelect">เลือกสติ๊กเกอร์</label>
+                   <select id="imageSelect" name="imageSelect" onchange="updateDisplay()">
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/NO.png?raw=true">เลือกสติ๊กเกอร์</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK1.png?raw=true">สีขาว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK2.png?raw=true">สีขาว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK3.png?raw=true">สีขาว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK4.png?raw=true">สีแดง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK5.png?raw=true">สีแดง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK6.png?raw=true">สีฟ้า</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK7.png?raw=true">สีเขียว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK8.png?raw=true">สีเหลือง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK9.png?raw=true">สีขาว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK10.png?raw=true">สีขาว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK11.png?raw=true">จุ๊บ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK12.png?raw=true">ขับรถ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK13.png?raw=true">หมีร้องไห้</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK14.png?raw=true">ไม่ไหวแย้ว</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK15.png?raw=true">ยิ้ม</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK16.png?raw=true">สุดยอด!</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK17.png?raw=true">ชิจังเป็นไข้</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK18.png?raw=true">โมจังถูกใจ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK19.png?raw=true">ชิจังซึม</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK20.png?raw=true">เยี่ยม</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK21.png?raw=true">หมีหลับ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK22.png?raw=true">มิวสิค!</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK23.png?raw=true">ชิจังจุ๊บ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK24.png?raw=true">มินิฮาร์ท</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK25.png?raw=true">ชิจัง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK26.png?raw=true">เยี่ยมไปเลย</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK27.png?raw=true">โอเค</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK28.png?raw=true">งงจัง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK29.png?raw=true">แหม่ๆ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK30.png?raw=true">สาธุ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK31.png?raw=true">ชิจังชี้</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK32.png?raw=true">ชิจังถูกใจ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK33.png?raw=true">+1</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK34.png?raw=true">หิวจัง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK35.png?raw=true">เพลงมา</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK36.png?raw=true">เดินเล่น</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK37.png?raw=true">ตายซะ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK38.png?raw=true">ฉลอง</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK39.png?raw=true">จุ๊บ</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK40.png?raw=true">ok</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK41.png?raw=true">Love U</option>
+                        <option value="https://github.com/useronlineid/Stickerslip/blob/main/StickerslipK42.png?raw=true">++1</option>
+
+                    </select>
+                    
+                    
+                <label for="QRCode">QRCode</label>
+                <input type="file" id="QRCode" name="QRCode" accept="image/*" onchange="updateDisplay()">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
