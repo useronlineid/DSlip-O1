@@ -1,0 +1,323 @@
+
+/* SF Thonburi */
+
+@font-face {
+    font-family: 'SFThonburiLight';
+    src: url('assets/fonts/SFThonburi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SFThonburiRegular';
+    src: url('assets/fonts/SFThonburi-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SFThonburiSemiBold';
+    src: url('assets/fonts/SFThonburi-Semibold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SFThonburiBold';
+    src: url('assets/fonts/SFThonburi-Bold.woff') format('woff');
+}
+
+/* Kanit */
+@font-face {
+    font-family: 'KanitThin';
+    src: url('assets/fonts/Kanit-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitExtraLight';
+    src: url('assets/fonts/Kanit-ExtraLight.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitLight';
+    src: url('assets/fonts/Kanit-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitRegular';
+    src: url('assets/fonts/Kanit-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitMedium';
+    src: url('assets/fonts/Kanit-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitSemiBold';
+    src: url('assets/fonts/Kanit-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitBold';
+    src: url('assets/fonts/Kanit-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitExtraBold';
+    src: url('assets/fonts/Kanit-ExtraBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'KanitBlack';
+    src: url('assets/fonts/Kanit-Black.woff') format('woff');
+}
+
+
+
+
+body {
+    font-family: 'KanitMedium', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    margin: 0;
+    background: linear-gradient(135deg, #4a5a6a, #3a4d5b, #2f3e4c, #263340);
+    overflow: auto;
+}
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    transform: scale(0.67);
+    transform-origin: center;
+    position: relative;
+}
+
+.display-container, .form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 1200px;
+    min-height: 400px;
+    max-height: 1500px;
+    resize: both;
+    overflow: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+h1 {
+    font-family: 'KanitRegular', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-top: 15px;
+    font-size: 23px;
+    font-weight: normal;
+    color: #D1D1D1;
+}
+
+input, select {
+    margin-top: 7px;
+    padding: 10px;
+    font-size: 22px;
+    font-family: 'KanitRegular', Arial, sans-serif;
+    border: 2px solid #5d6970;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.0); /* This makes the background transparent */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    color: #fff; /* Change the text color to something that contrasts with the background */
+}
+
+input:focus, select:focus {
+    border-color: #ffffff;
+    border-width: 2px; /* เพิ่มความหนา */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+
+select option {
+    font-size: 18px;
+    background-color: #263340; /* ปรับสีพื้นหลังของตัวเลือก */
+    color: #fff; /* สีตัวอักษรของตัวเลือก */
+}
+
+select option:hover {
+    background-color: #0066cc; /* เปลี่ยนสีของตัวเลือกเมื่อ hover */
+    color: #fff; /* สีของตัวอักษรในขณะ hover */
+}
+
+select option:checked {
+    background-color: #004b99; /* เปลี่ยนสีพื้นหลังเมื่อมีการเลือก */
+    color: #fff; /* สีตัวอักษรเมื่อมีการเลือก */
+}
+
+
+button {
+    font-family: 'KanitMedium', Arial, sans-serif;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input:hover, select:hover {
+    background: rgba(255, 255, 255, 0.1); /* เพิ่มความขาวอ่อนเมื่อ hover */
+    color: #ffffff; /* สีข้อความเปลี่ยนเป็นขาว */
+}
+
+button:hover {
+    background-color: #4a5a6a; /* เพิ่มสีขาวอ่อนเมื่อ hover */
+    color: #ffffff;
+}
+
+select option:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* เพิ่มความขาวอ่อนเมื่อ hover */
+    color: #ffffff;
+}
+
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#canvas {
+    border: none;
+}
+
+.qrcode-drop-area {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'KanitMedium', Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #999;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Battery Slider Styles */
+#battery {
+    appearance: none;
+    width: 93%;
+    height: 8px;
+    background: #4a5a6a; /* Matches the background color scheme */
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+#battery::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #4a5a6a;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#battery:hover::-webkit-slider-runnable-track {
+    background: #5d6970; /* Lighter on hover for track */
+}
+
+#battery::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff; /* White thumb for contrast */
+    box-shadow: 0px 0px 8px rgba(0, 102, 204, 0.7); /* Adds a glowing effect */
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    top: -4px; /* Center the thumb */
+}
+
+#battery:active::-webkit-slider-thumb {
+    background: #99ccff; /* Lighter blue on active */
+    box-shadow: 0px 0px 12px rgba(0, 102, 204, 1); /* Stronger glow when dragging */
+}
+
+/* For Firefox */
+#battery::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #4a5a6a;
+    border-radius: 5px;
+}
+
+#battery::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 0px 8px rgba(0, 102, 204, 0.7);
+    cursor: pointer;
+}
+
+#battery:active::-moz-range-thumb {
+    background: #99ccff;
+    box-shadow: 0px 0px 12px rgba(0, 102, 204, 1);
+}
+
+/* Power Saving Mode Button */
+#powerSavingMode {
+    margin-top: 10px;
+    background-color: #ff9900;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#powerSavingMode:hover {
+    background-color: #cc6600;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* ปรับแต่ง Scrollbar ให้เข้ากับธีม */
+::-webkit-scrollbar {
+    width: 10px; /* ความกว้างของ scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2f3e4c; /* สี track เข้ากับพื้นหลัง */
+    border-radius: 10px; /* เพิ่มความโค้งมนให้ scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3a4d5b; /* สี scrollbar เน้นให้เข้ากับองค์ประกอบ */
+    border-radius: 10px; /* เพิ่มความโค้งมนให้ scrollbar */
+    border: 2px solid #2f3e4c; /* ขอบรอบ scrollbar เข้ากับ track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4a5a6a; /* เปลี่ยนสีเมื่อ hover เข้ากับพื้นหลัง */
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* เพิ่มความขาวอ่อนเมื่อ hover */
+}
