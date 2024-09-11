@@ -2,20 +2,20 @@
 function loadFonts() {
     const fonts = [
         //SFThonburi
-        new FontFace('SFThonburiLight', 'url(/assets/fonts/SFThonburi.woff)'),
-        new FontFace('SFThonburiRegular', 'url(/assets/fonts/SFThonburi-Regular.woff)'),
-        new FontFace('SFThonburiSemiBold', 'url(/assets/fonts/SFThonburi-Semibold.woff)'),
+        new FontFace('SFThonburiLight', 'url(assets/fonts/SFThonburi.woff)'),
+        new FontFace('SFThonburiRegular', 'url(assets/fonts/SFThonburi-Regular.woff)'),
+        new FontFace('SFThonburiSemiBold', 'url(assets/fonts/SFThonburi-Semibold.woff)'),
         new FontFace('SFThonburiBold', 'url(/assets/fonts/SFThonburi-Bold.woff)'),
         //Kanit
-        new FontFace('KanitThin', 'url(/assets/fonts/Kanit-Thin.woff)'),
-        new FontFace('KanitExtraLight', 'url(/assets/fonts/Kanit-ExtraLight.woff)'),
-        new FontFace('KanitLight', 'url(/assets/fonts/Kanit-Light.woff)'),
-        new FontFace('KanitRegular', 'url(/assets/fonts/Kanit-Regular.woff)'),
-        new FontFace('KanitMedium', 'url(/assets/fonts/Kanit-Medium.woff)'),
-        new FontFace('KanitSemiBold', 'url(/assets/fonts/Kanit-SemiBold.woff)'),
-        new FontFace('KanitBold', 'url(/assets/fonts/Kanit-Bold.woff)'),
-        new FontFace('KanitExtraBold', 'url(/assets/fonts/Kanit-ExtraBold.woff)'),
-        new FontFace('KanitBlack', 'url(/assets/fonts/Kanit-Black.woff)'),
+        new FontFace('KanitThin', 'url(assets/fonts/Kanit-Thin.woff)'),
+        new FontFace('KanitExtraLight', 'url(assets/fonts/Kanit-ExtraLight.woff)'),
+        new FontFace('KanitLight', 'url(assets/fonts/Kanit-Light.woff)'),
+        new FontFace('KanitRegular', 'url(assets/fonts/Kanit-Regular.woff)'),
+        new FontFace('KanitMedium', 'url(assets/fonts/Kanit-Medium.woff)'),
+        new FontFace('KanitSemiBold', 'url(assets/fonts/Kanit-SemiBold.woff)'),
+        new FontFace('KanitBold', 'url(assets/fonts/Kanit-Bold.woff)'),
+        new FontFace('KanitExtraBold', 'url(assets/fonts/Kanit-ExtraBold.woff)'),
+        new FontFace('KanitBlack', 'url(assets/fonts/Kanit-Black.woff)'),
 
     ];
 
